@@ -3,19 +3,17 @@ const server = Bun.serve({
   fetch(req) {
     const url = new URL(req.url);
     
-    if (url.pathname === '/') {
-      return new Response('Hello World! 🌍', {
-        headers: { 'Content-Type': 'text/plain' },
+    if (url.pathname === "/") {
+      return new Response("Hello World! 🌍");
+    }
+    
+    if (url.pathname === "/health") {
+      return new Response(JSON.stringify({ status: "ok" }), {
+        headers: { "Content-Type": "application/json" },
       });
     }
     
-    if (url.pathname === '/health') {
-      return new Response('OK', {
-        headers: { 'Content-Type': 'text/plain' },
-      });
-    }
-    
-    return new Response('Not Found', { status: 404 });
+    return new Response("Not Found", { status: 404 });
   },
 });
 
