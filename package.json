@@ -1,0 +1,13 @@
+{
+  "name": "hello-bun-server",
+  "version": "1.0.0",
+  "description": "A minimal Bun server",
+  "main": "index.ts",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun run --watch index.ts"
+  },
+  "keywords": ["bun", "server"],
+  "author": "",
+  "license": "MIT"
+}
