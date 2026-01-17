@@ -1,13 +1,13 @@
 {
   "name": "hello-bun-server",
   "version": "1.0.0",
-  "description": "A minimal Bun server",
-  "main": "index.ts",
+  "description": "A minimal Bun server for Render",
   "scripts": {
-    "start": "bun run index.ts",
+    "start": "export PATH=\"$HOME/.bun/bin:$PATH\" && bun run index.ts",
     "dev": "bun run --watch index.ts"
   },
-  "keywords": ["bun", "server"],
-  "author": "",
-  "license": "MIT"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
 }
